@@ -93,7 +93,8 @@ a {
   font-weight: 900;
 }
 
-a:hover {
+a:hover,
+a:hover h2 {
   color: $twoColor;
 }
 
@@ -106,8 +107,7 @@ a:hover {
   background-size: cover;
 }
 
-.hero h1,
-.hero h2 {
+.hero h1 {
   color: white;
 }
 
@@ -115,7 +115,7 @@ h3 {
   font-weight: 400;
 }
 
-.main-logo{
+.main-logo {
   @extend %row-flex;
 }
 
