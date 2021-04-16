@@ -1,0 +1,364 @@
+/* ++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++ Propiedades y "Extends" ++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++ */
+
+/*Importem la font desitjada de googe que hem obtingut amb el selector a través de la API */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
+$myFont: "Montserrat", "Arial", "Helvetica", "sans-serif";
+$oneColor: #187c66;
+$twoColor: #b46c19;
+$logoSize: 300px;
+
+%three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+%row-flex {
+  display: flex;
+  flex-flow: row wrap;
+  /*El detall de fer us de "space-evenly" fa que es mantinguin centrats amb el salt de linia de l'element*/
+  justify-content: space-evenly;
+  align-items: flex-start;
+  text-align: center;
+}
+
+%twoCol-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+%full-width {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+  min-height: 75px;
+  height: auto;
+}
+
+/*Separador; fuente: https://css-tricks.com/examples/hrs/ */
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(218, 154, 18, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* ++++++++++++++++++++++++++++++++++ */
+/* +++++++++ Tipografías ++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++ */
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  color: $oneColor;
+}
+
+body {
+  font-family: $myFont;
+  font-size: 14px;
+  color: black;
+  line-height: 20px;
+}
+
+main {
+  padding: 10px 15vw;
+  text-align: center;
+}
+
+.index-main {
+  font-size: 18px;
+}
+.hero img {
+  width: $logoSize;
+}
+
+a {
+  text-decoration: none;
+  color: $oneColor;
+  font-weight: 900;
+}
+
+a:hover {
+  color: $twoColor;
+}
+
+/* ++++++++++++++++++++++++++++++++++ */
+/* +++++++++ Portada ++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++ */
+
+.hero {
+  background: url(../img/Arcusa-dron-opacity.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.hero h1,
+.hero h2 {
+  color: white;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.flex-container {
+  @extend %row-flex;
+  border-radius: 15px 15px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 5px;
+}
+
+.flex-container .sub-img {
+  max-width: 150px;
+  flex-grow: 1;
+  margin: 10px 10px;
+}
+
+.sub-img img {
+  width: 100%;
+}
+
+/* ++++++++++++++++++++++++++++++++++ */
+/* +++++++++ Header +++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++ */
+
+.main-header > .header-container {
+  @extend %row-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.header-container > .header-logo,
+.header-container > .header-right {
+  flex-grow: 1;
+}
+
+.header-container > .main-nav {
+  flex-grow: 5;
+}
+
+/* +++++++ Header Nav ++++++++ */
+.main-nav > ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+}
+
+nav li.active a {
+  color: $oneColor;
+  font-weight: 700;
+}
+
+/*alfa de 0,5*/
+nav a:hover {
+  opacity: 0.6;
+}
+
+nav li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.main-header .header-logo {
+  margin: 0;
+}
+
+/* ++++++++++++++++++++++++++++++++++ */
+/* +++++++++ Footer +++++++ +++++++++ */
+/* ++++++++++++++++++++++++++++++++++ */
+
+/* ++++++++++++++++++++++++++++++++++ */
+/* +++++++++ Especialidades +++++++++ */
+/* ++++++++++++++++++++++++++++++++++ */
+
+.grid-container {
+  @extend %three-column-grid;
+}
+
+.grid-container figure {
+  all: unset;
+  text-align: left;
+  width: 100%;
+}
+
+.grid-container img {
+  border-radius: 15px 15px;
+  width: 100%;
+  height: auto;
+}
+
+.grid-container a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ++++++++++++++++++++++++++++++++++ */
+/* +++++++++ Recetas ++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++ */
+
+#myRecipies * {
+  text-align: left;
+}
+.featured-img {
+  width: 75%;
+  filter: drop-shadow(8px 8px 10px gray);
+  border-radius: 15px 0px;
+}
+
+.two-column {
+  @extend %twoCol-flex;
+}
+
+.left-column {
+  flex-grow: 3 0 auto;
+  padding: 20px;
+}
+
+.right-column {
+  flex: 1 0 auto;
+  padding: 20px;
+}
+
+/* ++++++++++++++++++++++++++++++++++ */
+/* +++++++++ Presentación +++++++++++ */
+/* ++++++++++++++++++++++++++++++++++ */
+
+.two-column-same {
+  @extend %twoCol-flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .two-column-same {
+    flex-flow: row wrap;
+  }
+}
+
+.present-left {
+  flex-grow: 1 1 auto;
+  padding: 20px;
+  max-width: 50%;
+}
+
+.present-right {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+
+.present-right img {
+  max-width: 15vw;
+}
+
+
+// Haciendo un iframe responsive: https://cybmeta.com/como-hacer-un-iframe-responsive
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+// .two-column-same img {
+//   max-height: 100%;
+//   min-width: 100%;
+//   display: block;
+// }
+
+/* ++++++++++++++++++++++++++++++++++ */
+/* ++++ Fuentes del contenido +++++++ */
+/* ++++++++++++++++++++++++++++++++++ */
+
+.full-width-1 {
+  @extend %full-width;
+  background: linear-gradient(90deg, transparent, $oneColor, transparent);
+  //background-color: $oneColor;
+}
+
+.full-width-1 h2 {
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+/**************************************************************************/
+/* BREADCRUM -> https://www.w3schools.com/howto/howto_css_breadcrumbs.asp*/
+/**************************************************************************/
+ul.breadcrumb {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  color: #1c1c1c;
+  font-family: "Open Sans", sans-serif, arial;
+}
+
+/* Llistar sobre la horitzontal */
+ul.breadcrumb li {
+  display: inline;
+}
+
+/* Afegir els "slash" com a separadors */
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  text-decoration: none;
+  opacity: 1;
+  color: #1c1c1c;
+}
+
+ul.breadcrumb li a:visited {
+  color: unset;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  opacity: 0.5;
+}
+
+ul.breadcrumb li.active {
+  opacity: 0.5;
+}
