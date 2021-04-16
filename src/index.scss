@@ -7,7 +7,7 @@
 $myFont: "Montserrat", "Arial", "Helvetica", "sans-serif";
 $oneColor: #187c66;
 $twoColor: #b46c19;
-$logoSize: 300px;
+$logoSize: 250px;
 
 %three-column-grid {
   display: grid;
@@ -113,6 +113,10 @@ a:hover {
 
 h3 {
   font-weight: 400;
+}
+
+.main-logo{
+  @extend %row-flex;
 }
 
 .flex-container {
@@ -282,7 +286,6 @@ nav li {
 .present-right img {
   max-width: 15vw;
 }
-
 
 // Haciendo un iframe responsive: https://cybmeta.com/como-hacer-un-iframe-responsive
 .video {
