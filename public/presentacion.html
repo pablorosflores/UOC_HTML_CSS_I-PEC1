@@ -9,6 +9,12 @@
       content="Quiénes somos? Presentación del proyecto y de los contenidos de la web"
     />
     <link rel="stylesheet" type="text/css" href="../src/index.scss" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="any"
+      href="../img/serendipia_vector.svg"
+    />
   </head>
 
   <body>
@@ -18,18 +24,23 @@
           <a href="index.html"
             ><img
               class="img-logo"
-              src="../img/Serendipia_small.png"
-              alt="Website Logo"
+              src="../img/serendipia_vector.svg"
+              alt="Restaurante Serendipia Logo"
           /></a>
         </h1>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="especialidades.html">ESPECIALIDADES</a></li>
-            <li class="active"><a href="presentacion.html">PRESENTACIÓN</a></li>
-            <li><a href="fuentes.html">FUENTES</a></li>
-          </ul>
-        </nav>
+        <div class="main-nav">
+          <h2>Restaurante Serendipia</h2>
+          <nav>
+            <ul>
+              <li><a href="index.html">INICIO</a></li>
+              <li><a href="especialidades.html">ESPECIALIDADES</a></li>
+              <li class="active">
+                <a href="presentacion.html">PRESENTACIÓN</a>
+              </li>
+              <li><a href="fuentes.html">FUENTES</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="header-right"></div>
       </div>
     </header>
@@ -55,12 +66,19 @@
           </header>
         </section>
         <section class="two-column-same">
-          <img
-            id="myImg"
-            class="present-left"
-            src="../img/manon.jpg"
-            alt="Manon, la cocinera y responsable del restaurante Serendipia"
-          />
+          <div class="present-left">
+            <picture>
+              <source 
+                media="(max-width: 1199px)"
+                srcset="../img/manon_small.jpg"
+              />
+              <source media="(min-width: 1200px)" srcset="../img/manon.jpg" />
+              <img 
+                src="../img/manon_small.jpg"
+                alt="Manon haciendo un poco de bicicleta por el Biello Sobrarbe"
+              />
+            </picture>
+          </div>
           <div class="present-right">
             <h2>Manon y su convicción</h2>
             <p>
@@ -114,6 +132,7 @@
             <a href="especialidades.html">
               <figure class="sub-img">
                 <img
+                  class="rotate"
                   src="../img/dish.svg"
                   alt="Enlace a especialidades de la casa"
                 />
@@ -160,6 +179,45 @@
         </section>
       </article>
     </main>
-    <script src="./serendipia.js"></script>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div>
+          <ul class="footer-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="especialidades.html">Especialidades</a></li>
+            <li><a href="presentacion.html">Presentación</a></li>
+            <li><a href="fuentes.html">Fuentes</a></li>
+          </ul>
+          <ul class="social">
+            <li>
+              <a href="https://www.instagram.com/serendipiasobrarbe/"></a>
+                <object
+                type="image/svg+xml"
+                data="../img/instagram.svg"
+                class="icon-footer"
+              >
+                Instagram
+              </object>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/serendipiasobrarbe/">
+                <object
+                  type="image/svg+xml"
+                  data="../img/facebook.svg"
+                  class="icon-footer"
+                >
+                  Facebook
+                </object>
+              </a>
+            </li>
+          </ul>
+          <address>
+            Realizado por <a href="mailto:pabloros@uoc.edu">Pablo Ros</a>.
+          </address>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="./serendipia.js"></script> -->
   </body>
 </html>

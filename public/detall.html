@@ -6,26 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Receta" />
     <link rel="stylesheet" type="text/css" href="../src/index.scss" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="any"
+      href="../img/serendipia_vector.svg"
+    />
   </head>
 
   <body>
     <header></header>
-    <main>
+    <main class="myRecipies">
       <ul class="breadcrumb">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="especialidades.html">Especialidades</a></li>
         <li class="active"><a href="detall.html">Flan de Verduras</a></li>
       </ul>
-      <article id="myRecipies">
-        <img
-          class="featured-img"
-          src="../img/Platos/flanDeVerduras.jpg"
-          alt="Flan de verduras"
-        />
+      <article>
+        <div class="featured-container">
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="../img/Platos/flanDeVerduras_small.jpg"
+            />
+
+            <source
+              media="(max-width: 800px)"
+              srcset="../img/Platos/flanDeVerduras_medium.jpg"
+            />
+
+            <img
+              class="featured-img"
+              src="../img/Platos/flanDeVerduras_big.jpg"
+              alt="Flan de verduras"
+            />
+          </picture>
+          <div class="featured-txt"><h1>Flan de Verduras</h1></div>
+        </div>
         <div class="two-column">
           <div class="left-column">
             <section>
-              <h1>Mi Receta</h1>
+              <h2>Mi Receta</h2>
               <h3>
                 Esta receta de flan de verduras es muy fácil de preparar, y casi
                 al minuto tienes un plato sano, sabroso, y lleno de alegría y
@@ -33,6 +54,13 @@
               </h3>
               <p></p>
             </section>
+            <div class="banner">
+              <img
+                class="banner-img"
+                src="../img/Banners/legumbres.jpg"
+                alt="legumbres"
+              />
+            </div>
             <section id="ingredients">
               <h2>Ingredientes</h2>
               <p>Para 4 personas</p>
@@ -51,6 +79,13 @@
                 <li>Aceite de oliva o mantequilla</li>
               </ul>
             </section>
+            <div class="banner">
+              <img
+                class="banner-img"
+                src="../img/Banners/tomates.jpg"
+                alt="Manos cogiendo tomates"
+              />
+            </div>
             <section>
               <h2>Preparación</h2>
               <ol>
@@ -92,15 +127,57 @@
               <h2>Otras recetas</h2>
               <ul>
                 <li>
-                  <a href="detall2.html">Estofado de ternera</a>
+                  <a href="detall2.html">
+                    <img
+                      src="../img/Platos/estofadoTernera_small.jpg"
+                      alt="Enlace Estofado de ternera"
+                    />Estofado de ternera</a
+                  >
                 </li>
-                <li></li>
-                <li></li>
               </ul>
             </aside>
           </div>
         </div>
       </article>
     </main>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div>
+          <ul class="footer-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="especialidades.html">Especialidades</a></li>
+            <li><a href="presentacion.html">Presentación</a></li>
+            <li><a href="fuentes.html">Fuentes</a></li>
+          </ul>
+          <ul class="social">
+            <li>
+              <a href="https://www.instagram.com/serendipiasobrarbe/"></a>
+                <object
+                type="image/svg+xml"
+                data="../img/instagram.svg"
+                class="icon-footer"
+              >
+                Instagram
+              </object>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/serendipiasobrarbe/">
+                <object
+                  type="image/svg+xml"
+                  data="../img/facebook.svg"
+                  class="icon-footer"
+                >
+                  Facebook
+                </object>
+              </a>
+            </li>
+          </ul>
+          <address>
+            Realizado por <a href="mailto:pabloros@uoc.edu">Pablo Ros</a>.
+          </address>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

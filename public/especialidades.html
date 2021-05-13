@@ -9,6 +9,12 @@
       content="Página con las comidas y especialidades del restaurante"
     />
     <link rel="stylesheet" type="text/css" href="../src/index.scss" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="any"
+      href="../img/serendipia_vector.svg"
+    />
   </head>
 
   <body>
@@ -18,20 +24,23 @@
           <a href="index.html"
             ><img
               class="img-logo"
-              src="../img/Serendipia_small.png"
-              alt="Website Logo"
+              src="../img/serendipia_vector.svg"
+              alt="Restaurante Serendipia Logo"
           /></a>
         </h1>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="index.html">INICIO</a></li>
-            <li class="active">
-              <a href="especialidades.html">ESPECIALIDADES</a>
-            </li>
-            <li><a href="presentacion.html">PRESENTACIÓN</a></li>
-            <li><a href="fuentes.html">FUENTES</a></li>
-          </ul>
-        </nav>
+        <div class="main-nav">
+          <h2>Restaurante Serendipia</h2>
+          <nav>
+            <ul>
+              <li><a href="index.html">INICIO</a></li>
+              <li class="active">
+                <a href="especialidades.html">ESPECIALIDADES</a>
+              </li>
+              <li><a href="presentacion.html">PRESENTACIÓN</a></li>
+              <li><a href="fuentes.html">FUENTES</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="header-right"></div>
       </div>
     </header>
@@ -47,10 +56,14 @@
         <div class="grid-container">
           <figure>
             <img
-              src="../img/Platos/flanDeVerduras.jpg?width=300"
+              srcset="
+              ../img/Platos/uSmall/flanDeVerduras.jpg 250w,
+              ../img/Platos/small/flanDeVerduras.jpg  500w,
+              ../img/Platos/small/flanDeVerduras.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/flanDeVerduras.jpg"
               alt="Flan de verduras"
             />
-
             <figcaption>
               <div class="figtitle"></div>
               <div class="clubImgSub">Flan de verduras</div>
@@ -60,7 +73,15 @@
             </figcaption>
           </figure>
           <figure>
-            <img src="../img/Platos/judías.jpg" alt="Judías salteadas" />
+            <img
+              srcset="
+            ../img/Platos/uSmall/judías.jpg 250w,
+            ../img/Platos/small/judías.jpg  500w,
+            ../img/Platos/small/judías.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/judías.jpg"
+              alt="Judías salteadas"
+            />
             <figcaption>
               <div class="figtitle"></div>
               <div class="clubImgSub">Judías de Bárcabo con salteado</div>
@@ -71,7 +92,12 @@
           </figure>
           <figure>
             <img
-              src="../img/Platos/ensalada.jpg"
+              srcset="
+            ../img/Platos/uSmall/ensalada.jpg 250w,
+            ../img/Platos/small/ensalada.jpg  500w,
+            ../img/Platos/small/ensalada.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/ensalada.jpg"
               alt="Ensalada de tomate y aguacate"
             />
             <figcaption>
@@ -84,7 +110,12 @@
           </figure>
           <figure>
             <img
-              src="../img/Platos/risoto.jpg"
+              srcset="
+            ../img/Platos/uSmall/risoto.jpg 250w,
+            ../img/Platos/small/risoto.jpg  500w,
+            ../img/Platos/small/risoto.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/risoto.jpg"
               alt="Risotto de cebada y tofu"
             />
             <figcaption>
@@ -103,8 +134,13 @@
         <div class="grid-container">
           <figure>
             <img
-              src="../img/Platos/estofadoTernera.jpg"
-              alt="Estofado de ternera"
+              srcset="
+                ../img/Platos/uSmall/estofadoTernera.jpg 250w,
+                ../img/Platos/small/estofadoTernera.jpg  500w,
+                ../img/Platos/small/estofadoTernera.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/estofadoTernera.jpg"
+              alt="Estofado de Ternera"
             />
             <figcaption>
               <div class="figtitle"></div>
@@ -115,7 +151,15 @@
             </figcaption>
           </figure>
           <figure>
-            <img src="../img/Platos/couscous.jpg" alt="Cous-Cous con Merguez" />
+            <img
+              srcset="
+              ../img/Platos/uSmall/couscous.jpg 250w,
+              ../img/Platos/small/couscous.jpg  500w,
+              ../img/Platos/small/couscous.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/couscous.jpg"
+              alt="Cous-Cous con Merguez"
+            />
             <figcaption>
               <div class="figtitle"></div>
               <div class="clubImgSub">Cous-Cous con Merguez</div>
@@ -125,7 +169,15 @@
             </figcaption>
           </figure>
           <figure>
-            <img src="../img/Platos/Mousaka.jpg" alt="Mousaka" />
+            <img
+              srcset="
+            ../img/Platos/uSmall/mousaka.jpg 250w,
+            ../img/Platos/small/mousaka.jpg  500w,
+            ../img/Platos/small/mousaka.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/mousaka.jpg"
+              alt="Mousaka"
+            />
             <figcaption>
               <div class="figtitle"></div>
               <div class="clubImgSub">Mousaka</div>
@@ -136,7 +188,12 @@
           </figure>
           <figure>
             <img
-              src="../img/Platos/hamburgusaVegetariana.jpg"
+              srcset="
+            ../img/Platos/uSmall/hamburguesaVegetariana.jpg 250w,
+            ../img/Platos/small/hamburguesaVegetariana.jpg  500w,
+            ../img/Platos/small/hamburguesaVegetariana.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/hamburguesaVegetariana.jpg"
               alt="Hamburguesa vegetariana"
             />
             <figcaption>
@@ -148,7 +205,15 @@
             </figcaption>
           </figure>
           <figure>
-            <img src="../img/Platos/polloAlCurry.jpg" alt="Pollo al curry" />
+            <img
+              srcset="
+            ../img/Platos/uSmall/polloAlCurry.jpg 250w,
+            ../img/Platos/small/polloAlCurry.jpg  500w,
+            ../img/Platos/small/polloAlCurry.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/polloAlCurry.jpg"
+              alt="Pollo al curry"
+            />
             <figcaption>
               <div class="figtitle"></div>
               <div class="clubImgSub">Pollo al curry</div>
@@ -165,7 +230,11 @@
         <div class="grid-container">
           <figure>
             <img
-              src="../img/Platos/panacotaLavanda.jpg"
+              srcset="
+            ../img/Platos/uSmall/panacotaLavanda.jpg 250w,
+            ../img/Platos/small/panacotaLavanda.jpg  500w,
+            ../img/Platos/small/panacotaLavanda.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
               alt="Panacota a la lavanda"
             />
             <figcaption>
@@ -177,7 +246,15 @@
             </figcaption>
           </figure>
           <figure>
-            <img src="../img/Platos/chocolate.jpg" alt="Tarta de chocolate" />
+            <img
+              srcset="
+            ../img/Platos/uSmall/chocolate.jpg 250w,
+            ../img/Platos/small/chocolate.jpg  500w,
+            ../img/Platos/small/chocolate.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/chocolate.jpg"
+              alt="Tarta de chocolate"
+            />
             <figcaption>
               <div class="figtitle"></div>
               <div class="clubImgSub">Tarta de chocolate</div>
@@ -187,7 +264,15 @@
             </figcaption>
           </figure>
           <figure>
-            <img src="../img/Platos/tartaArandanos.jpg" alt="Postre" />
+            <img
+              srcset="
+            ../img/Platos/uSmall/tartaArandanos.jpg 250w,
+            ../img/Platos/small/tartaArandanos.jpg  500w,
+            ../img/Platos/small/tartaArandanos.jpg 2x"
+              sizes="(max-width: 400px) 250px, 500px"
+              src="../img/Platos/small/tartaArandanos.jpg"
+              alt="Postre"
+            />
             <figcaption>
               <div class="figtitle"></div>
               <div class="clubImgSub">Tarta de arándanos</div>
@@ -199,5 +284,44 @@
         </div>
       </section>
     </main>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div>
+          <ul class="footer-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="especialidades.html">Especialidades</a></li>
+            <li><a href="presentacion.html">Presentación</a></li>
+            <li><a href="fuentes.html">Fuentes</a></li>
+          </ul>
+          <ul class="social">
+            <li>
+              <a href="https://www.instagram.com/serendipiasobrarbe/"></a>
+                <object
+                type="image/svg+xml"
+                data="../img/instagram.svg"
+                class="icon-footer"
+              >
+                Instagram
+              </object>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/serendipiasobrarbe/">
+                <object
+                  type="image/svg+xml"
+                  data="../img/facebook.svg"
+                  class="icon-footer"
+                >
+                  Facebook
+                </object>
+              </a>
+            </li>
+          </ul>
+          <address>
+            Realizado por <a href="mailto:pabloros@uoc.edu">Pablo Ros</a>.
+          </address>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

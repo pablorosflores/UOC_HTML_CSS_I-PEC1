@@ -9,6 +9,12 @@
       content="Página la fuente / origen de los contenidos de esta web"
     />
     <link rel="stylesheet" type="text/css" href="../src/index.scss" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="any"
+      href="../img/serendipia_vector.svg"
+    />
   </head>
 
   <body>
@@ -18,18 +24,23 @@
           <a href="index.html"
             ><img
               class="img-logo"
-              src="../img/Serendipia_small.png"
-              alt="Website Logo"
+              src="../img/serendipia_vector.svg"
+              alt="Restaurante Serendipia Logo"
           /></a>
         </h1>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="especialidades.html">ESPECIALIDADES</a></li>
-            <li><a href="presentacion.html">PRESENTACIÓN</a></li>
-            <li class="active"><a href="fuentes.html">FUENTES</a></li>
-          </ul>
-        </nav>
+        <div class="main-nav">
+          <h2>Restaurante Serendipia</h2>
+          <nav>
+            <ul>
+              <li><a href="index.html">INICIO</a></li>
+              <li>
+                <a href="especialidades.html">ESPECIALIDADES</a>
+              </li>
+              <li><a href="presentacion.html">PRESENTACIÓN</a></li>
+              <li class="active"><a href="fuentes.html">FUENTES</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="header-right"></div>
       </div>
     </header>
@@ -41,7 +52,7 @@
             <h2>Fotografías</h2>
           </div>
           <p>
-            Todas las <b>fotos</b> usadas en esta web y el
+            Todas las <b>fotos de platos</b> usadas en esta web y el
             <b>logo de Serendipia</b> son de creación propia y estan sujetos la
             siguiente licencia CC:
           </p>
@@ -51,11 +62,24 @@
         </section>
         <section>
           <div class="full-width-1">
-            <h2>Logos</h2>
+            <h2>Logos y fotos externas</h2>
           </div>
+          </p>
           <p>
-            Los otros <b>logos o imágenes vectoriales</b> se han obtenido de
-            <a href="https://www.flaticon.com/">Flaticon</a>
+            Icons and social logos made by
+            <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </p>
+          <p>Recursos fotográficos:</p>
+          <p>
+            <a href="https://stocksnap.io/author/nordwood">Nordwood Themes</a>
+            from <a href="https://stocksnap.io">StockSnap</a>
+          </p>
+          <p>
+            <a href="https://stocksnap.io/author/timsullivan">Tim Sullivan</a>
+            from <a href="https://stocksnap.io">StockSnap</a>
           </p>
         </section>
         <section>
@@ -72,5 +96,44 @@
         </section>
       </article>
     </main>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div>
+          <ul class="footer-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="especialidades.html">Especialidades</a></li>
+            <li><a href="presentacion.html">Presentación</a></li>
+            <li><a href="fuentes.html">Fuentes</a></li>
+          </ul>
+          <ul class="social">
+            <li>
+              <a href="https://www.instagram.com/serendipiasobrarbe/"></a>
+                <object
+                type="image/svg+xml"
+                data="../img/instagram.svg"
+                class="icon-footer"
+              >
+                Instagram
+              </object>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/serendipiasobrarbe/">
+                <object
+                  type="image/svg+xml"
+                  data="../img/facebook.svg"
+                  class="icon-footer"
+                >
+                  Facebook
+                </object>
+              </a>
+            </li>
+          </ul>
+          <address>
+            Realizado por <a href="mailto:pabloros@uoc.edu">Pablo Ros</a>.
+          </address>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
